@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawCare — Find animal care, fast</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M14 26c-4.5 0-7.5-2.8-7.5-6.4 0-4.4 3.8-6.2 3.8-9.8 0-2.1 1.7-3.8 3.7-3.8s3.7 1.7 3.7 3.8c0 3.6 3.8 5.4 3.8 9.8 0 3.6-3 6.4-7.5 6.4Z" fill="#33503F"/>
+        <ellipse cx="7.2" cy="9.5" rx="2.4" ry="3" fill="#33503F"/>
+        <ellipse cx="20.8" cy="9.5" rx="2.4" ry="3" fill="#33503F"/>
+        <ellipse cx="3.4" cy="14.5" rx="2" ry="2.6" fill="#33503F"/>
+        <ellipse cx="24.6" cy="14.5" rx="2" ry="2.6" fill="#33503F"/>
+      </svg>
+      PawCare
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="search-results.html?emergency=1" class="is-emergency">Emergency</a>
+      <a href="ai-assistant.html">AI Assistant</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="shell hero__grid">
+      <div class="hero__copy">
+        <h1>Find help for an animal, fast.</h1>
+        <p class="hero__lede">Search vets, clinics, ambulances, NGOs, rescuers and boarding facilities near you — and get a plain-language summary of a vet report in seconds.</p>
+
+        <form id="home-search-form" class="search-panel">
+          <input type="text" id="home-location" placeholder="Your location, e.g. Bhopal" aria-label="Your location">
+          <button type="submit" class="btn btn--primary">Search nearby</button>
+        </form>
+
+        <div class="emergency-row">
+          <a href="search-results.html?emergency=1" class="btn btn--emergency">Emergency Help →</a>
+        </div>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <svg width="280" height="280" viewBox="0 0 280 280" fill="none">
+          <circle cx="140" cy="140" r="132" fill="#E7EDE6"/>
+          <path d="M140 210c-38 0-63-23-63-53 0-37 32-52 32-82 0-17.7 14-32 31-32s31 14.3 31 32c0 30 32 45 32 82 0 30-25 53-63 53Z" fill="#33503F"/>
+          <ellipse cx="88" cy="72" rx="19" ry="24" fill="#33503F"/>
+          <ellipse cx="192" cy="72" rx="19" ry="24" fill="#33503F"/>
+          <ellipse cx="58" cy="110" rx="16" ry="21" fill="#33503F"/>
+          <ellipse cx="222" cy="110" rx="16" ry="21" fill="#33503F"/>
+          <circle cx="140" cy="140" r="132" stroke="#33503F" stroke-opacity="0.15" stroke-width="1.5"/>
+          <path d="M108 226a58 58 0 0 1 64 0" stroke="#B5432E" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-strip">
+    <div class="shell">
+      <h2>Browse by category</h2>
+      <div class="pill-row">
+        <button class="pill" data-category="Vet">Vets</button>
+        <button class="pill" data-category="Clinic">Clinics</button>
+        <button class="pill" data-category="Ambulance">Ambulances</button>
+        <button class="pill" data-category="NGO">NGOs</button>
+        <button class="pill" data-category="Rescuer">Rescuers</button>
+        <button class="pill" data-category="Boarding">Boarding</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell">
+    <div class="ai-teaser">
+      <div>
+        <h2>Have a vet report you don't understand?</h2>
+        <p>Upload it and get a plain-language summary, reviewed against the original — no medical jargon.</p>
+      </div>
+      <a href="ai-assistant.html" class="btn btn--ghost">Try the AI Assistant →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">PawCare — a screening-assignment prototype by Aaryan Patidar. Not a live service.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search results · PawCare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell">
+    <a class="brand" href="index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M14 26c-4.5 0-7.5-2.8-7.5-6.4 0-4.4 3.8-6.2 3.8-9.8 0-2.1 1.7-3.8 3.7-3.8s3.7 1.7 3.7 3.8c0 3.6 3.8 5.4 3.8 9.8 0 3.6-3 6.4-7.5 6.4Z" fill="#33503F"/>
+        <ellipse cx="7.2" cy="9.5" rx="2.4" ry="3" fill="#33503F"/>
+        <ellipse cx="20.8" cy="9.5" rx="2.4" ry="3" fill="#33503F"/>
+        <ellipse cx="3.4" cy="14.5" rx="2" ry="2.6" fill="#33503F"/>
+        <ellipse cx="24.6" cy="14.5" rx="2" ry="2.6" fill="#33503F"/>
+      </svg>
+      PawCare
+    </a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="search-results.html?emergency=1" class="is-emergency">Emergency</a>
+      <a href="ai-assistant.html">AI Assistant</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="results-header shell">
+    <h1 style="font-size:26px; margin-bottom:14px;">Results near <span id="search-label">your area</span></h1>
+    <input type="text" id="results-search" placeholder="Search by name or service type" aria-label="Search results">
+  </div>
+
+  <div class="shell results-layout">
+    <aside>
+      <div class="filter-group">
+        <h3>Service type</h3>
+        <label class="filter-option"><input type="checkbox" data-filter-category value="Vet"> Vet</label>
+        <label class="filter-option"><input type="checkbox" data-filter-category value="Clinic"> Clinic</label>
+        <label class="filter-option"><input type="checkbox" data-filter-category value="Ambulance"> Ambulance</label>
+        <label class="filter-option"><input type="checkbox" data-filter-category value="NGO"> NGO</label>
+        <label class="filter-option"><input type="checkbox" data-filter-category value="Rescuer"> Rescuer</label>
+        <label class="filter-option"><input type="checkbox" data-filter-category value="Boarding"> Boarding</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Distance</h3>
+        <select id="filter-distance">
+          <option value="Infinity">Any distance</option>
+          <option value="2">Under 2 km</option>
+          <option value="5">Under 5 km</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <h3>Availability</h3>
+        <label class="filter-option"><input type="checkbox" id="filter-open-now"> Open now</label>
+        <label class="filter-option"><input type="checkbox" id="filter-emergency"> Emergency available</label>
+      </div>
+    </aside>
+
+    <div>
+      <p class="results-count"><span id="result-count">0</span> services found</p>
+      <ul id="results-list"></ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">PawCare — a screening-assignment prototype by Aaryan Patidar. Not a live service.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
